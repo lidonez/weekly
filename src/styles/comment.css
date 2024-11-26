@@ -1,6 +1,9 @@
+/* 引入 LXGW WenKai Screen R 字体 */
 @import url('https://gw.alipayobjects.com/os/k/font/lxgwwenkaiscreenr.css');
 
+/* 主要CSS变量定义 */
 main {
+  /* 按钮相关颜色变量 */
   --color-btn-text: #24292f;
   --color-btn-bg: #f6f8fa;
   --color-btn-border: rgb(27 31 36 / 15%);
@@ -23,9 +26,13 @@ main {
   --color-btn-primary-disabled-text: rgb(255 255 255 / 80%);
   --color-btn-primary-disabled-bg: #c0b5ac;
   --color-btn-primary-disabled-border: rgb(27 31 36 / 15%);
+
+  /* 文本颜色相关变量 */
   --color-fg-default: #24292f;
   --color-fg-muted: #57606a;
   --color-fg-subtle: #6e7781;
+
+  /* 背景和边框相关变量 */
   --color-canvas-default: #fff;
   --color-canvas-overlay: #fff;
   --color-canvas-inset: #fff;
@@ -37,6 +44,8 @@ main {
   --color-accent-emphasis: #eee;
   --color-accent-muted: #eee;
   --color-accent-subtle: #fff;
+
+  /* 状态颜色相关变量 */
   --color-success-fg: #1a7f37;
   --color-attention-fg: #9a6700;
   --color-danger-fg: #cf222e;
@@ -48,65 +57,61 @@ main {
   --color-scale-blue-1: #eee;
   --color-social-reaction-bg-hover: var(--color-scale-gray-1);
   --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
-  color-scheme: light;
+
+  color-scheme: light; /* 指定配色方案为亮色主题 */
 }
 
+/* 主要内容区域样式 */
 main {
-  font-family: 'LXGW WenKai Screen R', sans-serif;
-  letter-spacing: 0.6px;
+  font-family: 'LXGW WenKai Screen R', sans-serif; /* 设置文字字体 */
+  letter-spacing: 0.6px; /* 字间距 */
   color: var(--theme-text);
   background-color: var(--theme-bg);
 }
 
+/* 加载相关图片设置 */
 main .pagination-loader-container {
   background-image: url('https://github.com/images/modules/pulls/progressive-disclosure-line.svg');
 }
 
-main .gsc-loading-image {
-  background-image: url('https://github.githubassets.com/images/mona-loading-default.gif');
-}
-
+/* 评论区域相关样式 */
 main .gsc-left-header .color-text-secondary,
 .gsc-header {
-  display: none;
+  display: none; /* 隐藏特定头部元素 */
 }
+
+/* 评论框样式 */
 main .gsc-comment-box-textarea {
   border-color: var(--color-border-default);
 }
+
+/* 表单控件样式 */
 .form-control {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   font-size: 0.9rem;
 }
+
+/* 移除焦点时的轮廓和阴影 */
 main .gsc-comment-box-textarea:focus,
 #__next .form-control:focus {
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.btn-primary,
-.btn.ml-1.rounded-md.border {
-  box-shadow: none;
-  border: none;
-}
-.gsc-tl-line {
-  width: 1px;
-}
 
+/* 评论内容样式 */
 .gsc-comment {
   font-size: 0.9rem;
   line-height: 1.8;
 }
 
-.gsc-comment-content {
-  font-size: 1rem;
-}
-
+/* 自定义反应计数器文本 */
 .gsc-reactions-count {
   visibility: hidden;
 }
 .gsc-reactions-count:after {
-  content: '欢迎一起交流~';
+  content: '欢迎一起交流~'; /* 添加自定义文本 */
   visibility: visible;
   font-size: 1.4rem;
   display: inline-block;
@@ -114,17 +119,7 @@ main .gsc-comment-box-textarea:focus,
   margin-left: -4rem;
 }
 
-.gsc-reply-content {
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-}
-#__next .rounded-md {
-  border-radius: 4px;
-}
-textarea:focus,
-input:focus {
-  outline: none;
-}
+/* 社交反应项样式 */
 .gsc-social-reaction-summary-item {
   font-size: 0.85rem;
   border-radius: 8px;
